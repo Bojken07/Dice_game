@@ -12,9 +12,9 @@ public class Main {
 
         String player1;
         String player2;
-        int die;
+        int die1;
         int die2;
-        int rounds = 5;
+        int rounds;
         int Player1sum = 0;
         int Player2sum = 0;
 
@@ -28,20 +28,25 @@ public class Main {
         player2 = scan.nextLine();
         System.out.println("Player2's name is: " + player2);
 
+        // How many rounds
+        System.out.println("Input how many rounds do you want:");
+        rounds = scan.nextInt();
+        System.out.println("The rounds will be: " + rounds);
+
         // Player1 turn
         System.out.println(player1 + " is throwing!");
 
         for (int i = 0; i < rounds; i++) {
 
-            die = random.nextInt(6) + 1;
-            System.out.println(die);
+            die1 = random.nextInt(6) + 1;
+            System.out.println(die1);
 
-            Player1sum += die;
+            Player1sum += die1;
             System.out.println("Sum is: " + Player1sum);
         }
 
         // Player2 turn
-        System.out.println(player2 + "is throwing!");
+        System.out.println(player2 + " is throwing!");
 
         for (int i = 0; i < rounds; i++) {
             die2 = random.nextInt(6) + 1;
@@ -52,8 +57,8 @@ public class Main {
         }
 
         // The score
-        System.out.println(player1 + " score: " + Player1sum);
-        System.out.println(player2 + " score: " + Player2sum);
+        System.out.println(player1 + "'s score: " + Player1sum);
+        System.out.println(player2 + "'s score: " + Player2sum);
 
         if ( Player1sum > Player2sum) {
             System.out.println("The winner is: " + player1);
